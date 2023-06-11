@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>missy-shirt</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <style>
+      #topButton {
+          display: none; /* Hide the button by default */
+          position: fixed; /* Fixed position to remain visible when scrolling */
+          bottom: 20px; /* Distance from the bottom of the page */
+          right: 30px; /* Distance from the right side of the page */
+          z-index: 99; /* Ensure it appears above other elements */
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: #e193a9;
+          color: #fff;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+          font-weight:bold;
+      }
+    </style>
+  </head>
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img"></div>
+          </a>
+
+          <div class="navbar-brand">
+            <a href="index.html"><h1>女裝服飾介紹</h1></a>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+           <li>
+             <a href="missy-Tshirt.html" style= "padding-top: 50px;">
+               <span class="glyphicon glyphicon-heart"></span><br class="hidden-xs"> like</a>
+           </li>
+           <li>
+             <a href="#footer" style= "padding-top: 50px;">
+              <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+           </li>
+           
+           <li>
+             <a href="#" onclick="searchSpan()" style= "padding-top: 50px; text-align: right;">
+               <input type="text" style="color:black" id="searchInput" value="請輸入..." placeholder="Enter search term">
+               <span class="glyphicon glyphicon-search" style= "margin-left: 10px; margin-right: 10px;"></span></span><br class="hidden-xs">search</a>
+           </li>
+           <li id="phone" class="hidden-xs" style= "padding-top: 40px;">
+             <a href="mailto:missy@gmail.com">
+               <span>missy@gmail.com</span></a><div>* our email</div>
+           </li>
+          </ul><!-- #nav-list -->
+       </div><!-- .collapse .navbar-collapse -->
+     </div><!-- .container -->
+   </nav><!-- #header-nav -->
+ </header>
+
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="mailto:missy@gmail.com">
+    <span class="glyphicon glyphicon-envelope"></span>
+    missy@gmail.com
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">* our email</div>
+
+  <script>
+    function searchSpan() {
+      // JavaScript function code here
+      // Get the search term from the input field
+      var searchTerm = document.getElementById("searchInput").value;
+  
+      // Get all the span elements
+      var spans = document.getElementsByTagName("span");
+  
+      // Loop through each span element and check if it contains the search term
+      for (var i = 0; i < spans.length; i++) {
+        var span = spans[i];
+        var text = span.innerHTML;
+    
+        // Compare the search term with the text content of the span (case-insensitive)
+        if (text.toLowerCase().includes(searchTerm.toLowerCase())) {
+          // If the search term is found, highlight the span or perform any desired action
+          span.style.backgroundColor = "yellow";
+        }else {
+          // If the search term is not found, remove any previous highlighting
+          // span.style.backgroundColor = "initial";
+        }
+      }
+    }
+  </script>
+  <script>
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("footerButton").style.display = "block";
+        } else {
+            document.getElementById("footerButton").style.display = "none";
+        }
+    }
+
+    function scrollToFooter() {
+        const footerElement = document.getElementById("footer");
+        footerElement.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+<!--main-content-->
+  <div id="main-content" class="container">
+    <h2 id="menu-categories-title" class="text-center"> 襯衫特輯</h2>
+    <section class="row">
+      <div class="col-md-6 col-sm-4 col-xs-6 col-xxs-12">
+        <div class="category-tile">
+          <img width="400" height="530"  src="images/shirt/normal.jpg" alt="Lunch">
+          <span>正常版襯衫</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-4 col-xs-6 col-xxs-12">
+        <div class="category-tile">
+          <img width="400" height="530" src="images/shirt/V.jpg" alt="Lunch">
+          <span>V領襯衫</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-4 col-xs-6 col-xxs-12">
+        <div class="category-tile">
+          <img width="400" height="530" src="images/shirt/flower.jpg" alt="Lunch">
+          <span>花苞領襯衫</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-4 col-xs-6 col-xxs-12">
+        <div class="category-tile">
+          <img width="400" height="530" src="images/shirt/lattice.jpg" alt="Lunch">
+          <span>格紋襯衫</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-4 col-xs-6 col-xxs-12">
+        <div class="category-tile">
+          <img width="400" height="530" src="images/shirt/long.jpg" alt="Lunch">
+          <span>長版襯衫</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-4 col-xs-6 col-xxs-12">
+        <div class="category-tile">
+          <img width="400" height="530" src="images/shirt/dress.jpg" alt="Lunch">
+          <span>襯衫洋裝</span>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- End of #main-content -->
+
+  <footer id="footer" class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Content:</span><br>
+          T-shirt<br>
+          dress<br>
+          shorts<br>
+          pants
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Email:</span><br>
+          missy@gmail.com<br>
+          welcome to ask questions!
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>"This is the first web design I have done! Very excited to be taking this class this semester!"</p>
+          <p>"I hope that you can learn more about the styles of women's clothing after reading the website!"</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; 網頁程式設計final project.</div>
+    </div>
+  </footer>
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("topButton").style.display = "block";
+            } else {
+                document.getElementById("topButton").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
